@@ -6,6 +6,7 @@ import urllib
 
 import re, sys, os, time
 
+NOVEL_SAVE_DIR = './novels'
 
 ROOT_URL = 'https://www.aozora.gr.jp/'
 MIDDLE_URI = 'index_pages/'
@@ -21,7 +22,13 @@ def remove_tail_filename(text, target_word):
             position += 1
     return text[:-position]
         
+def make_dir(dir_name):
+    if not os.path.exists(dir_name):
+        os.mkdir(dir_name)
 
+def save_novel(file_path, text):
+    with open(file_path, 'w') as f:
+        f.write(text)
 
 if __name__ == '__main__':
 
@@ -64,10 +71,17 @@ if __name__ == '__main__':
                     novel_detail_soup = bs(novel_detail, 'html.parser')
                     novel_detail_parent = remove_tail_filename(novel_detail_complete_link, '/')
                     novel_link = novel_detail_soup.find(href=re.compile('\./files.+html'))
-                    novel_html_complete_link = novel_detail_parent + novel_link.get('href')[2:]
-                    with urllib.request.urlopen(novel_html_complete_link) as response:
-                        novel_html = response.read()
-                    novel_html_soup = bs(novel_html, 'html.parser')
-                    print(novel_html_soup)
-
-
+                    if novel_link is not None:
+                        novel_html_complete_link = novel_detail_parent + novel_link.get('href')[2:]
+                        with urllib.request.urlopen(novel_html_complete_link) as response:
+                            novel_html = response.read()
+                        time.sleep(SLEEP_SECONDS)
+                        novel_html_soup = bs(novel_html, 'html.parser')
+                        novel_title = novel_html_soup.find('h1', class_='title')
+                        novel_author = novel_html_soup.find('h2', class_='author')
+                        novel_content = novel_html_soup.find('div', class_='main_text')
+                        print(novel_title.string)
+                        print(novel_author.string)
+                        make_dir('novels/' + novel_author.string)
+                        save_novel('novels/' + novel_author.string + '/' + novel_title.string, novel_content.text)
+                        #print(novel_content.text)
