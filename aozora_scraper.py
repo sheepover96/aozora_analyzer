@@ -27,8 +27,9 @@ def make_dir(dir_name):
         os.mkdir(dir_name)
 
 def save_novel(file_path, text):
-    with open(file_path, 'w') as f:
-        f.write(text)
+    if not os.path.exists(file_path):
+        with open(file_path, 'w') as f:
+            f.write(text)
 
 if __name__ == '__main__':
 
@@ -76,12 +77,19 @@ if __name__ == '__main__':
                         with urllib.request.urlopen(novel_html_complete_link) as response:
                             novel_html = response.read()
                         time.sleep(SLEEP_SECONDS)
-                        novel_html_soup = bs(novel_html, 'html.parser')
-                        novel_title = novel_html_soup.find('h1', class_='title')
-                        novel_author = novel_html_soup.find('h2', class_='author')
-                        novel_content = novel_html_soup.find('div', class_='main_text')
-                        print(novel_title.string)
-                        print(novel_author.string)
-                        make_dir('novels/' + novel_author.string)
-                        save_novel('novels/' + novel_author.string + '/' + novel_title.string, novel_content.text)
-                        #print(novel_content.text)
+                        try:
+                            novel_html_soup = bs(novel_html, 'html.parser')
+                            novel_title = novel_html_soup.find('h1', class_='title')
+                            novel_author = novel_html_soup.find('h2', class_='author')
+                            novel_content = novel_html_soup.find('div', class_='main_text')
+                            print(novel_title.string)
+                            print(novel_author.string)
+                            make_dir('novels/' + novel_author.string)
+                            save_novel('novels/' + novel_author.string + '/' + novel_title.string, novel_content.text)
+                            #print(novel_content.text)
+                        except AttributeError as e:
+                            print(e)
+                            print(novel_link)
+                        except urllib.error.URLError as e2:
+                            print(e)
+                            print(novel_link)
