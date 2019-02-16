@@ -68,7 +68,7 @@ if __name__ == '__main__':
                 # get novel detail
                 for novel_link in novel_link_list:
                     print('novellink', novel_link.string)
-                    if is_downloaded(novel_link.string, downloaded_author_list):
+                    if not is_downloaded(novel_link.string, downloaded_author_list):
                         print('donwnload')
                         with urllib.request.urlopen(ROOT_URL + MIDDLE_URI + author_link.get('href')) as response:
                             novel_detail_list = response.read()
