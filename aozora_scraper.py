@@ -35,6 +35,7 @@ def is_downloaded(author_name, downloaded_author_list):
 
 def save_novel(file_path, text):
     if not os.path.exists(file_path):
+        print('saved', file_path)
         with open(file_path, 'w') as f:
             f.write(text)
 
@@ -49,6 +50,7 @@ if __name__ == '__main__':
 
     toppage_soup = bs(aozora_top, 'html.parser')
     idx_link_list = toppage_soup.find_all(href=re.compile('person'))
+    print(idx_link_list[0].string)
 
     try:
         # get author list
@@ -67,8 +69,9 @@ if __name__ == '__main__':
                 novel_link_list = author_list_soup.find_all(href=re.compile('person[0-9]+'))
                 # get novel detail
                 for novel_link in novel_link_list:
-                    print('novellink', novel_link.string)
-                    if not is_downloaded(novel_link.string, downloaded_author_list):
+                    novel_link_author = novel_link.string
+                    print(novel_link_author)
+                    if is_downloaded(novel_link_author, downloaded_author_list):
                         print('donwnload')
                         with urllib.request.urlopen(ROOT_URL + MIDDLE_URI + author_link.get('href')) as response:
                             novel_detail_list = response.read()
@@ -97,8 +100,8 @@ if __name__ == '__main__':
                                     novel_content = novel_html_soup.find('div', class_='main_text')
                                     print(novel_title.string)
                                     print(novel_author.string)
-                                    make_dir('novels/' + novel_author.string)
-                                    save_novel('novels/' + novel_author.string + '/' + novel_title.string, novel_content.text)
+                                    make_dir('novels/' + novel_link_author)
+                                    save_novel('novels/' + novel_link_author + '/' + novel_title.string, novel_content.text)
                                     #print(novel_content.text)
                                 except AttributeError as e:
                                     print(e)
@@ -108,6 +111,9 @@ if __name__ == '__main__':
                                     print(novel_link)
                                 except OSError as e3:
                                     print(e3)
+                                    print(novel_link)
+                                except urllib.error.HTTPError as e4:
+                                    print(e4)
                                     print(novel_link)
                     else:
                         print('skip')
