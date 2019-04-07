@@ -27,6 +27,13 @@ if __name__ == '__main__':
                     with open('./cards/' + card + '/files/' + novel, 'r') as f:
                         novel_page_html = f.read()
                         novel_parsed = bs(novel_page_html, 'html.parser')
+                        try:
+                            for rt in novel_parsed('rt'):
+                                rt.decompose()
+                            for rp in novel_parsed('rp'):
+                                rp.decompose()
+                        except AttributeError as err:
+                            print(err)
                         novel_title = novel_parsed.find('h1', class_='title')
                         novel_author = novel_parsed.find('h2', class_='author')
                         novel_content = novel_parsed.find('div', class_='main_text')
