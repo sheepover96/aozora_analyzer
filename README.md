@@ -2,7 +2,7 @@
 Scrape Aozora bunko page, parse aozora bunko datas, analyze aozora bunko novels.
 
 
-## aozora_scraper
+## aozora_parser
 This script can be used to parse the html novel data in aozora_bunko repository.
 
 At first, clone following repository.
@@ -25,6 +25,6 @@ find cards -name '*.html' -exec nkf -w --overwrite {} \;
 
 parse novel html files.
 
-'''
+```
 python aozora_parser.py
-'''
+```

@@ -112,9 +112,6 @@ if __name__ == '__main__':
                                 except OSError as e3:
                                     print(e3)
                                     print(novel_link)
-                                except urllib.error.HTTPError as e4:
-                                    print(e4)
-                                    print(novel_link)
                     else:
                         print('skip')
     except:
