@@ -1,0 +1,48 @@
+1555584284244	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/77/_3gxq2q15nx7zwc7jk0njk9h0000gn/T/rust_mozprofile.HIwELYjQw5cB"
+2019-04-18 19:44:44.407 firefox-bin[3355:22831626] kCFURLVolumeIsAutomountedKey missing for file:///private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint/: Error Domain=NSCocoaErrorDomain Code=257 "ファイル“FPInstallMountPoint”を表示するためのアクセス権がないため、開けませんでした。" UserInfo={NSURL=file:///private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint/, NSFilePath=/private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint, NSUnderlyingError=0x1057bc2b0 {Error Domain=NSPOSIXErrorDomain Code=13 "Permission denied"}}
+1555584285320	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1555584285320	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1555584285320	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1555584287931	Marionette	INFO	Listening on port 65408
+1555584288011	Marionette	WARN	TLS certificate errors will be ignored for this session
+1555584300365	Marionette	INFO	Stopped listening on port 65408
+1555589188221	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/77/_3gxq2q15nx7zwc7jk0njk9h0000gn/T/rust_mozprofile.4J52AWDDJ2uH"
+2019-04-18 21:06:28.359 firefox-bin[7162:23728332] kCFURLVolumeIsAutomountedKey missing for file:///private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint/: Error Domain=NSCocoaErrorDomain Code=257 "ファイル“FPInstallMountPoint”を表示するためのアクセス権がないため、開けませんでした。" UserInfo={NSURL=file:///private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint/, NSFilePath=/private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint, NSUnderlyingError=0x10a3bc310 {Error Domain=NSPOSIXErrorDomain Code=13 "Permission denied"}}
+1555589189124	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1555589189124	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1555589189125	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1555589197537	Marionette	INFO	Listening on port 50055
+1555589197589	Marionette	WARN	TLS certificate errors will be ignored for this session
+1555589207858	Marionette	INFO	Stopped listening on port 50055
+1555596058825	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/77/_3gxq2q15nx7zwc7jk0njk9h0000gn/T/rust_mozprofile.JenanhKbgi7M"
+2019-04-18 23:00:59.046 firefox-bin[12668:23944670] kCFURLVolumeIsAutomountedKey missing for file:///private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint/: Error Domain=NSCocoaErrorDomain Code=257 "ファイル“FPInstallMountPoint”を表示するためのアクセス権がないため、開けませんでした。" UserInfo={NSURL=file:///private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint/, NSFilePath=/private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint, NSUnderlyingError=0x1038bc250 {Error Domain=NSPOSIXErrorDomain Code=13 "Permission denied"}}
+1555596060042	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1555596060043	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1555596060043	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1555596062024	Marionette	INFO	Listening on port 51377
+1555596062047	Marionette	WARN	TLS certificate errors will be ignored for this session
+1555596069891	Marionette	INFO	Stopped listening on port 51377
+1555596260296	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/77/_3gxq2q15nx7zwc7jk0njk9h0000gn/T/rust_mozprofile.kufCr3o8Dbo5"
+2019-04-18 23:04:20.446 firefox-bin[12963:23947939] kCFURLVolumeIsAutomountedKey missing for file:///private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint/: Error Domain=NSCocoaErrorDomain Code=257 "ファイル“FPInstallMountPoint”を表示するためのアクセス権がないため、開けませんでした。" UserInfo={NSURL=file:///private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint/, NSFilePath=/private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint, NSUnderlyingError=0x10c385e20 {Error Domain=NSPOSIXErrorDomain Code=13 "Permission denied"}}
+1555596261359	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1555596261360	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1555596261360	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1555596263572	Marionette	INFO	Listening on port 51482
+1555596263659	Marionette	WARN	TLS certificate errors will be ignored for this session
+1555596272253	Marionette	INFO	Stopped listening on port 51482
+1555596287127	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/77/_3gxq2q15nx7zwc7jk0njk9h0000gn/T/rust_mozprofile.t8NGqMgMZMEz"
+2019-04-18 23:04:47.242 firefox-bin[13064:23949424] kCFURLVolumeIsAutomountedKey missing for file:///private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint/: Error Domain=NSCocoaErrorDomain Code=257 "ファイル“FPInstallMountPoint”を表示するためのアクセス権がないため、開けませんでした。" UserInfo={NSURL=file:///private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint/, NSFilePath=/private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint, NSUnderlyingError=0x108295e20 {Error Domain=NSPOSIXErrorDomain Code=13 "Permission denied"}}
+1555596287968	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1555596287969	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1555596287969	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1555596290159	Marionette	INFO	Listening on port 51564
+1555596290264	Marionette	WARN	TLS certificate errors will be ignored for this session
+1555596300441	Marionette	INFO	Stopped listening on port 51564
+1555597320313	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/77/_3gxq2q15nx7zwc7jk0njk9h0000gn/T/rust_mozprofile.ludX7ctXqsEx"
+2019-04-18 23:22:00.429 firefox-bin[14139:23961830] kCFURLVolumeIsAutomountedKey missing for file:///private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint/: Error Domain=NSCocoaErrorDomain Code=257 "ファイル“FPInstallMountPoint”を表示するためのアクセス権がないため、開けませんでした。" UserInfo={NSURL=file:///private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint/, NSFilePath=/private/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/FPInstallMountPoint, NSUnderlyingError=0x101482e20 {Error Domain=NSPOSIXErrorDomain Code=13 "Permission denied"}}
+1555597321252	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1555597321253	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1555597321253	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1555597323556	Marionette	INFO	Listening on port 52111
+1555597323668	Marionette	WARN	TLS certificate errors will be ignored for this session
+1555597334413	Marionette	INFO	Stopped listening on port 52111

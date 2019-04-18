@@ -3,8 +3,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 import pickle, sys, os
 
+from utils.pickle_helper import pickle_dump, pickle_load
+
 NOVEL_ROOT_DIR = './novels'
 
+NOVEL_TO_IDX = 'novel2idx.pickle'
+IDX_TO_NOVEL = 'idx2novel.pickle'
 TF_IDF_VEC = 'tf_idf_vec_sw.pickle'
 VECTORIZER = 'vectorizer_sw.pickle'
 
@@ -46,25 +50,29 @@ def tf_idf(corpus):
 
 def main():
 
-    novel_title = []
+    idx2novel = []
+    novel2idx = {}
     corpus = []
     author_list = [file_name for file_name in os.listdir(NOVEL_ROOT_DIR) if not file_name.startswith('.')]
+    idx = 0
     for author in author_list:
         novel_list = [file_name for file_name in os.listdir(os.path.join(NOVEL_ROOT_DIR, author)) if not file_name.startswith('.')]
         for novel in novel_list:
+            if not author in novel2idx:
+                novel2idx[author] = {}
+            novel2idx[author][novel] = idx
             with open(os.path.join(NOVEL_ROOT_DIR, author, novel), 'r') as f:
                 novel_content = f.read()
-                novel_title.append(author + ' | ' + novel)
-                print(len(tokenizer(novel_content)))
-                corpus.append(novel_content)
+                idx2novel.append(author + ' | ' + novel)
+                #corpus.append(novel_content)
 
+            idx += 1
     tf_idf_vec, vectorizer = tf_idf(corpus)
 
-    with open(os.path.join('./pickle_objects', TF_IDF_VEC), 'wb') as f:
-        pickle.dump(tf_idf_vec, f)
-
-    with open(os.path.join('./pickle_objects', VECTORIZER), 'wb') as f:
-        pickle.dump(vectorizer, f)
+    pickle_dump(novel2idx, os.path.join('./pickle_objects', NOVEL_TO_IDX))
+    pickle_dump(idx2novel, os.path.join('./pickle_objects', IDX_TO_NOVEL))
+    pickle_dump(tf_idf_vec, os.path.join('./pickle_objects', TF_IDF_VEC))
+    pickle_dump(vectorizer, os.path.join('./pickle_objects', VECTORIZER))
 
 
 if __name__ == '__main__':

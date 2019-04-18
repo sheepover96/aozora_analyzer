@@ -1,3 +1,9 @@
 .idea
+__pycache__
+.ipynb_checkpoints
+geckodriver.log
+dataset
+imgs
+pickle_objects
 novels
 test_novels
